@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LiskCell - חברת משחקים</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#6d28d9',secondary:'#4f46e5'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Heebo', sans-serif;
+}
+.hero-section {
+background-image: url('https://readdy.ai/api/search-image?query=A%20futuristic%20gaming%20world%20with%20vibrant%20neon%20lights%2C%20advanced%20technology%20interfaces%2C%20and%20fantasy%20elements.%20The%20image%20shows%20a%20breathtaking%20landscape%20with%20floating%20islands%2C%20magical%20portals%2C%20and%20high-tech%20gaming%20devices.%20The%20left%20side%20has%20a%20smooth%20gradient%20transition%20to%20a%20darker%20area%20where%20text%20can%20be%20clearly%20visible.%20The%20right%20side%20features%20more%20detailed%20gaming%20elements%20and%20characters.%20The%20overall%20style%20is%20digital%20art%20with%20rich%20colors%20and%20dramatic%20lighting.&width=1920&height=1080&seq=12345&orientation=landscape');
+background-size: cover;
+background-position: center;
+position: relative;
+}
+.hero-section::before {
+content: "";
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.4) 100%);
+}
+.game-card:hover .game-info {
+opacity: 1;
+}
+.newsletter-input:focus {
+outline: none;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Header Navigation -->
+<header class="bg-gray-900 text-white sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<div class="flex items-center space-x-4 space-x-reverse">
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-6 !rounded-button whitespace-nowrap">
+התחברות / הרשמה
+</button>
+</div>
+<nav class="hidden md:flex items-center space-x-8 space-x-reverse">
+<a href="#" class="text-white hover:text-primary transition-colors py-2">צור קשר</a>
+<a href="#" class="text-white hover:text-primary transition-colors py-2">אודות</a>
+<a href="#" class="text-white hover:text-primary transition-colors py-2">משחקים</a>
+<a href="#" class="text-white hover:text-primary transition-colors py-2">דף הבית</a>
+</nav>
+<div class="font-['Pacifico'] text-2xl text-white">
+LiskCell
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section w-full min-h-[600px] flex items-center justify-center">
+<div class="container mx-auto px-4 py-20 relative z-10">
+<div class="max-w-3xl mx-auto text-center">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">ברוכים הבאים לעולם המשחקים של LiskCell</h1>
+<p class="text-xl text-gray-200 mb-8">גלו עולמות חדשים, אתגרים מרתקים וחוויות משחק שלא הכרתם. הצטרפו אלינו למסע הגיימינג האולטימטיבי.</p>
+<div class="flex space-x-4 space-x-reverse justify-center">
+<button class="bg-primary hover:bg-primary/90 text-white py-3 px-8 !rounded-button text-lg font-medium whitespace-nowrap">
+שחק עכשיו
+</button>
+<button class="bg-white/10 hover:bg-white/20 text-white border border-white/30 py-3 px-8 !rounded-button text-lg font-medium whitespace-nowrap">
+גלה עוד
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Popular Games Grid -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4">המשחקים המובילים שלנו</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">גלו את המשחקים הפופולריים ביותר שלנו שכבשו את לב השחקנים ברחבי העולם</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Game 1 -->
+<div class="game-card bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%20screenshot%20from%20a%20fantasy%20role-playing%20game%20showing%20a%20magical%20forest%20with%20glowing%20elements%2C%20ancient%20ruins%2C%20and%20mystical%20creatures.%20The%20image%20has%20high-quality%20graphics%20with%20detailed%20textures%2C%20dramatic%20lighting%20effects%2C%20and%20a%20rich%20color%20palette%20dominated%20by%20deep%20greens%20and%20magical%20blue%20glows.%20The%20scene%20depicts%20a%20hero%20character%20facing%20an%20epic%20adventure%20ahead.&width=600&height=400&seq=game1&orientation=landscape" alt="משחק פנטזיה" class="w-full h-64 object-cover object-top">
+<div class="game-info absolute inset-0 bg-black/70 opacity-0 transition-opacity flex flex-col justify-center items-center p-6 text-white">
+<h4 class="text-xl font-bold mb-2">עולמות קסומים</h4>
+<p class="text-sm mb-4">צאו למסע בעולם פנטזיה מלא הרפתקאות, קסם ויצורים מסתוריים.</p>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 !rounded-button whitespace-nowrap">
+למידע נוסף
+</button>
+</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<span class="bg-purple-100 text-primary px-2 py-1 rounded-full text-xs">פנטזיה RPG</span>
+<div class="flex">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-half-fill text-yellow-400"></i>
+</div>
+</div>
+<h3 class="text-lg font-bold">עולמות קסומים</h3>
+</div>
+</div>
+<!-- Game 2 -->
+<div class="game-card bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%20screenshot%20from%20a%20futuristic%20sci-fi%20space%20combat%20game%20showing%20a%20detailed%20spaceship%20cockpit%20view%20with%20holographic%20displays%2C%20advanced%20weapons%20systems%2C%20and%20a%20space%20battle%20happening%20outside.%20The%20image%20features%20high-quality%20graphics%20with%20metallic%20textures%2C%20lens%20flares%2C%20and%20a%20color%20scheme%20dominated%20by%20deep%20blues%20and%20bright%20neon%20accents.%20The%20scene%20depicts%20an%20intense%20dogfight%20between%20spaceships%20with%20laser%20beams%20and%20explosions.&width=600&height=400&seq=game2&orientation=landscape" alt="משחק חלל" class="w-full h-64 object-cover object-top">
+<div class="game-info absolute inset-0 bg-black/70 opacity-0 transition-opacity flex flex-col justify-center items-center p-6 text-white">
+<h4 class="text-xl font-bold mb-2">מלחמת הכוכבים</h4>
+<p class="text-sm mb-4">שלטו בספינת חלל מתקדמת והילחמו בקרבות אוויר מרהיבים במרחבי הגלקסיה.</p>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 !rounded-button whitespace-nowrap">
+למידע נוסף
+</button>
+</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">סימולטור חלל</span>
+<div class="flex">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+</div>
+<h3 class="text-lg font-bold">מלחמת הכוכבים</h3>
+</div>
+</div>
+<!-- Game 3 -->
+<div class="game-card bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%20screenshot%20from%20a%20strategic%20city-building%20game%20showing%20an%20intricate%20metropolis%20with%20skyscrapers%2C%20parks%2C%20transportation%20systems%2C%20and%20citizens.%20The%20image%20has%20detailed%20graphics%20with%20realistic%20textures%2C%20dynamic%20lighting%20effects%2C%20and%20a%20vibrant%20color%20palette.%20The%20scene%20depicts%20a%20thriving%20city%20with%20various%20districts%2C%20traffic%20systems%2C%20and%20infrastructure%20elements%20from%20an%20isometric%20perspective.&width=600&height=400&seq=game3&orientation=landscape" alt="משחק בניית עיר" class="w-full h-64 object-cover object-top">
+<div class="game-info absolute inset-0 bg-black/70 opacity-0 transition-opacity flex flex-col justify-center items-center p-6 text-white">
+<h4 class="text-xl font-bold mb-2">מטרופוליס</h4>
+<p class="text-sm mb-4">בנו את העיר האולטימטיבית, נהלו משאבים ופתחו תשתיות מתקדמות.</p>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 !rounded-button whitespace-nowrap">
+למידע נוסף
+</button>
+</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs">סימולטור בנייה</span>
+<div class="flex">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-line text-yellow-400"></i>
+</div>
+</div>
+<h3 class="text-lg font-bold">מטרופוליס</h3>
+</div>
+</div>
+<!-- Game 4 -->
+<div class="game-card bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%20screenshot%20from%20a%20racing%20game%20showing%20a%20high-speed%20sports%20car%20racing%20on%20a%20dynamic%20track%20with%20stunning%20environments.%20The%20image%20has%20photorealistic%20graphics%20with%20detailed%20car%20models%2C%20motion%20blur%20effects%2C%20and%20a%20vibrant%20color%20palette.%20The%20scene%20depicts%20an%20intense%20race%20moment%20with%20other%20competitors%2C%20track%20obstacles%2C%20and%20spectacular%20weather%20effects%20creating%20a%20sense%20of%20speed%20and%20excitement.&width=600&height=400&seq=game4&orientation=landscape" alt="משחק מרוצים" class="w-full h-64 object-cover object-top">
+<div class="game-info absolute inset-0 bg-black/70 opacity-0 transition-opacity flex flex-col justify-center items-center p-6 text-white">
+<h4 class="text-xl font-bold mb-2">מהירות עליונה</h4>
+<p class="text-sm mb-4">התחרו במכוניות ספורט מהירות במסלולים מאתגרים ברחבי העולם.</p>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 !rounded-button whitespace-nowrap">
+למידע נוסף
+</button>
+</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<span class="bg-red-100 text-red-700 px-2 py-1 rounded-full text-xs">מרוצים</span>
+<div class="flex">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-half-fill text-yellow-400"></i>
+</div>
+</div>
+<h3 class="text-lg font-bold">מהירות עליונה</h3>
+</div>
+</div>
+<!-- Game 5 -->
+<div class="game-card bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%20screenshot%20from%20a%20puzzle%20adventure%20game%20showing%20a%20mysterious%20ancient%20temple%20with%20intricate%20mechanisms%2C%20glowing%20symbols%2C%20and%20environmental%20puzzles.%20The%20image%20has%20artistic%20graphics%20with%20detailed%20architectural%20elements%2C%20atmospheric%20lighting%2C%20and%20a%20color%20palette%20dominated%20by%20warm%20golds%20and%20cool%20blues.%20The%20scene%20depicts%20a%20character%20exploring%20the%20temple%20and%20interacting%20with%20puzzle%20elements.&width=600&height=400&seq=game5&orientation=landscape" alt="משחק פאזל" class="w-full h-64 object-cover object-top">
+<div class="game-info absolute inset-0 bg-black/70 opacity-0 transition-opacity flex flex-col justify-center items-center p-6 text-white">
+<h4 class="text-xl font-bold mb-2">תעלומת המקדש</h4>
+<p class="text-sm mb-4">פתרו חידות מורכבות וגלו את סודות המקדש העתיק בהרפתקה מרתקת.</p>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 !rounded-button whitespace-nowrap">
+למידע נוסף
+</button>
+</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full text-xs">פאזל הרפתקאות</span>
+<div class="flex">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-line text-yellow-400"></i>
+</div>
+</div>
+<h3 class="text-lg font-bold">תעלומת המקדש</h3>
+</div>
+</div>
+<!-- Game 6 -->
+<div class="game-card bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%20screenshot%20from%20a%20survival%20horror%20game%20showing%20a%20dark%2C%20abandoned%20hospital%20with%20eerie%20lighting%2C%20mysterious%20shadows%2C%20and%20unsettling%20details.%20The%20image%20has%20atmospheric%20graphics%20with%20realistic%20textures%2C%20fog%20effects%2C%20and%20a%20desaturated%20color%20palette%20dominated%20by%20dark%20blues%20and%20grays.%20The%20scene%20depicts%20a%20tense%20moment%20with%20subtle%20horror%20elements%20and%20a%20first-person%20perspective%20exploring%20the%20haunted%20environment.&width=600&height=400&seq=game6&orientation=landscape" alt="משחק אימה" class="w-full h-64 object-cover object-top">
+<div class="game-info absolute inset-0 bg-black/70 opacity-0 transition-opacity flex flex-col justify-center items-center p-6 text-white">
+<h4 class="text-xl font-bold mb-2">צללי האימה</h4>
+<p class="text-sm mb-4">שרדו בבית החולים הנטוש והתמודדו עם האימה שאורבת בצללים.</p>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 !rounded-button whitespace-nowrap">
+למידע נוסף
+</button>
+</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<span class="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">אימה הישרדותית</span>
+<div class="flex">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-half-fill text-yellow-400"></i>
+</div>
+</div>
+<h3 class="text-lg font-bold">צללי האימה</h3>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<button class="bg-primary hover:bg-primary/90 text-white py-3 px-8 !rounded-button text-lg font-medium whitespace-nowrap">
+לכל המשחקים
+</button>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4">למה לבחור ב-LiskCell?</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">אנו מציעים חוויית משחק ייחודית עם יתרונות שלא תמצאו במקום אחר</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="bg-white p-8 rounded-lg shadow-lg text-center">
+<div class="w-16 h-16 mx-auto mb-6 bg-purple-100 rounded-full flex items-center justify-center">
+<i class="ri-gamepad-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">איכות משחק גבוהה</h3>
+<p class="text-gray-600">המשחקים שלנו מפותחים עם תשומת לב לפרטים הקטנים ביותר, עם גרפיקה מתקדמת וחוויית משחק חלקה.</p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-white p-8 rounded-lg shadow-lg text-center">
+<div class="w-16 h-16 mx-auto mb-6 bg-purple-100 rounded-full flex items-center justify-center">
+<i class="ri-customer-service-2-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">תמיכה טכנית 24/7</h3>
+<p class="text-gray-600">צוות התמיכה המקצועי שלנו זמין בכל שעה כדי לעזור לכם בכל בעיה או שאלה שעולה במהלך המשחק.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-white p-8 rounded-lg shadow-lg text-center">
+<div class="w-16 h-16 mx-auto mb-6 bg-purple-100 rounded-full flex items-center justify-center">
+<i class="ri-group-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">קהילת שחקנים פעילה</h3>
+<p class="text-gray-600">הצטרפו לקהילה תוססת של מיליוני שחקנים, השתתפו באירועים מיוחדים וצרו חברויות חדשות.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- News & Updates Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4">חדשות ועדכונים</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">הישארו מעודכנים עם החדשות האחרונות, העדכונים והאירועים הקרובים</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- News Item 1 -->
+<div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md">
+<img src="https://readdy.ai/api/search-image?query=A%20gaming%20tournament%20scene%20with%20professional%20players%20competing%20on%20stage%2C%20large%20screens%20displaying%20gameplay%2C%20and%20an%20excited%20audience.%20The%20image%20shows%20a%20modern%20esports%20arena%20with%20dramatic%20lighting%2C%20team%20logos%2C%20and%20high-tech%20gaming%20setups.%20The%20atmosphere%20captures%20the%20excitement%20and%20energy%20of%20competitive%20gaming%20events.&width=600&height=300&seq=news1&orientation=landscape" alt="טורניר משחקים" class="w-full h-48 object-cover object-top">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<span class="text-sm text-gray-500">22 במאי, 2025</span>
+<span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">אירוע</span>
+</div>
+<h3 class="text-xl font-bold mb-3">טורניר העולמי של LiskCell</h3>
+<p class="text-gray-600 mb-4">הטורניר השנתי הגדול שלנו יתקיים בחודש הבא עם פרסים בשווי מיליוני שקלים. הירשמו עכשיו!</p>
+<a href="#" class="text-primary font-medium hover:underline">קרא עוד</a>
+</div>
+</div>
+<!-- News Item 2 -->
+<div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md">
+<img src="https://readdy.ai/api/search-image?query=A%20game%20development%20scene%20showing%20programmers%20and%20designers%20working%20on%20creating%20a%20new%20video%20game.%20The%20image%20displays%20computer%20screens%20with%20code%2C%203D%20models%2C%20and%20game%20assets.%20The%20workspace%20has%20a%20creative%20atmosphere%20with%20concept%20art%20on%20walls%20and%20developers%20collaborating%20on%20game%20elements.&width=600&height=300&seq=news2&orientation=landscape" alt="פיתוח משחק חדש" class="w-full h-48 object-cover object-top">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<span class="text-sm text-gray-500">18 במאי, 2025</span>
+<span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs">עדכון</span>
+</div>
+<h3 class="text-xl font-bold mb-3">משחק חדש בפיתוח: "אגדת הדרקון"</h3>
+<p class="text-gray-600 mb-4">אנו שמחים לחשוף פרטים ראשונים על המשחק החדש שלנו שיושק ברבעון הבא. צפו לחוויה מרהיבה!</p>
+<a href="#" class="text-primary font-medium hover:underline">קרא עוד</a>
+</div>
+</div>
+<!-- News Item 3 -->
+<div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md">
+<img src="https://readdy.ai/api/search-image?query=A%20game%20update%20scene%20showing%20new%20content%20being%20added%20to%20an%20existing%20game.%20The%20image%20displays%20new%20characters%2C%20environments%2C%20weapons%2C%20and%20features%20that%20are%20part%20of%20the%20update.%20The%20visual%20style%20shows%20before%20and%20after%20comparisons%20highlighting%20the%20improvements%20and%20additions%20to%20the%20game.&width=600&height=300&seq=news3&orientation=landscape" alt="עדכון משחק" class="w-full h-48 object-cover object-top">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<span class="text-sm text-gray-500">15 במאי, 2025</span>
+<span class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs">שדרוג</span>
+</div>
+<h3 class="text-xl font-bold mb-3">עדכון גדול למשחק "מלחמת הכוכבים"</h3>
+<p class="text-gray-600 mb-4">העדכון החדש כולל ספינות חלל חדשות, מערכות נשק מתקדמות ומשימות מרתקות. זמין להורדה עכשיו!</p>
+<a href="#" class="text-primary font-medium hover:underline">קרא עוד</a>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<button class="bg-white border border-primary text-primary hover:bg-primary/5 py-3 px-8 !rounded-button text-lg font-medium whitespace-nowrap">
+לכל החדשות
+</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Company Info -->
+<div>
+<div class="font-['Pacifico'] text-3xl text-white mb-6">
+LiskCell
+</div>
+<p class="text-gray-400 mb-6">אנו מפתחים משחקים מרהיבים שמספקים חוויות בלתי נשכחות לשחקנים בכל העולם.</p>
+<div class="flex space-x-4 space-x-reverse">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+<i class="ri-facebook-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+<i class="ri-twitter-x-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+<i class="ri-instagram-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+<i class="ri-youtube-fill text-white"></i>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h3 class="text-xl font-bold mb-6">קישורים מהירים</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">דף הבית</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">משחקים</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">אודות</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">צור קשר</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">קריירה</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">תנאי שימוש</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">מדיניות פרטיות</a></li>
+</ul>
+</div>
+<!-- Contact Info -->
+<div>
+<h3 class="text-xl font-bold mb-6">צור קשר</h3>
+<ul class="space-y-3">
+<li class="flex items-center space-x-3 space-x-reverse">
+<div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full">
+<i class="ri-map-pin-line text-white"></i>
+</div>
+<span class="text-gray-400">רחוב הברוש 42, תל אביב, ישראל</span>
+</li>
+<li class="flex items-center space-x-3 space-x-reverse">
+<div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full">
+<i class="ri-phone-line text-white"></i>
+</div>
+<span class="text-gray-400">03-1234567</span>
+</li>
+<li class="flex items-center space-x-3 space-x-reverse">
+<div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full">
+<i class="ri-mail-line text-white"></i>
+</div>
+<span class="text-gray-400">info@liskcell.com</span>
+</li>
+<li class="flex items-center space-x-3 space-x-reverse">
+<div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full">
+<i class="ri-time-line text-white"></i>
+</div>
+<span class="text-gray-400">א'-ה': 9:00-18:00</span>
+</li>
+</ul>
+</div>
+<!-- Newsletter -->
+<div>
+<h3 class="text-xl font-bold mb-6">הרשמה לניוזלטר</h3>
+<p class="text-gray-400 mb-4">הירשמו לניוזלטר שלנו וקבלו עדכונים על משחקים חדשים, הנחות מיוחדות ואירועים קרובים.</p>
+<div class="flex">
+<input type="email" placeholder="הזינו את האימייל שלכם" class="newsletter-input bg-gray-800 text-white px-4 py-3 rounded-r-button w-full border-none">
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-3 !rounded-l-button whitespace-nowrap">
+הרשמה
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-500 mb-4 md:mb-0">© 2025 LiskCell. כל הזכויות שמורות.</p>
+<div class="flex items-center space-x-4 space-x-reverse">
+<img src="https://cdn-icons-png.flaticon.com/512/196/196566.png" alt="Visa" class="h-8">
+<img src="https://cdn-icons-png.flaticon.com/512/196/196561.png" alt="Mastercard" class="h-8">
+<img src="https://cdn-icons-png.flaticon.com/512/196/196565.png" alt="PayPal" class="h-8">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968220.png" alt="Apple Pay" class="h-8">
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script id="mobileNavScript">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const mobileMenu = document.querySelector('.mobile-menu');
+if (mobileMenuBtn && mobileMenu) {
+mobileMenuBtn.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+});
+}
+});
+</script>
+</body>
+</html>
